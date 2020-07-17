@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="main-style.css" type="text/css">
+        <title>Home Page</title>
+    </head>
+    <body>
+            <!-- Start of Header (same for every page)-->
+
+        <div class="main-header">
+            <h1>The Quarantined Mart</h1>
+        </div>
+
+        <div class="grid-container">
+
+          <!-- Main Navigation Bar Begins -->
+          <div class="navi-bar">
+            <ul>
+              <li><a class="active" href="index.html">HOME</a></li>
+              <li><a href="pages/about.html">About</a></li>
+              <li style="float:right"><a href="pages/cart.html">Cart</a></li>
+              <li style="float:right"><a href="pages/profile.html">Profile</a></li>
+            </ul>
+          </div>
+          <!-- Main Navigation Bar Ends -->
+
+
+          <!-- Main Display Begins -->
+
+          <!-- Code for side bar navigation inspired by https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp -->
+          <div class="content-row">
+            <div class="filter-product">
+              <h2>Click to show:</h2>
+                <div class="sidenav">
+                  <a href="#">View All Products</a><br>
+                  <a onclick="test_function(event, 'fruits')">Fruits</a><br>
+                  <a href="#">Vegetables</a><br>
+                  <a href="#">Dairy Products</a><br>
+                  <a href="#">Meat Products</a>
+                </div>
+            </div>
+            <div class="main-display">
+              <div id="fruits" class="sidenav-links">
+
+                <h2>Fruits</h2><br>
+                <div class="row-products">
+                  <div class="column-products">
+                    <div class="sidenav-content">
+                      <img src="img/apple.jpg" alt="apple loogo" style="width:100%">
+                      <h1>Set of 3 Apples</h1>
+                      <p class="price">$2.00</p>
+                      <p>An apple a day, keeps the doctor away (up to 3 days / unit)</p>
+                      <p><button>Add to Cart</button></p>
+                    </div> 
+                  </div>
+                  <div class="column-products">
+                    <div class="card">..</div>
+                  </div>
+                  <div class="column-products">
+                    <div class="card">..</div>
+                  </div>
+                  <div class="column-products">
+                    <div class="card">..</div>
+                  </div>
+                </div>
+
+
+              </div>
+              <div id="vegetables" class="side-nav" style="display:none">
+                <h2>vegetables</h2>
+              </div>
+              <div id="dairy" class="side-nav" style="display:none">
+                <h2>dairy</h2>
+              </div>
+              <div id="meat" class="side-nav" style="display:none">
+                <h2>meat</h2>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Main Display Ends -->
+
+            
+          <div class="footer">
+            <p id="signature">Website designed by Kenny Nguyen</p>
+          </div>
+
+        </div>
+        <script src="main.js"></script>
+        <script src="groceries.js"></script>
+    </body>
+</html>
+

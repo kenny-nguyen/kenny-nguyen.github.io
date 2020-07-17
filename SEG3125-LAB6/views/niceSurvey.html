@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <title>
+            Questionnaire
+        </title>
+        <link rel="stylesheet" href="/assets/style.css" type="text/css">
+        <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+        <!-- JavaScript Sources-->
+        <script src="/assets/action.js" defer></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+<body>
+    <!-- Title -->
+    <h1><strong>YouTube UI Review Questionnaire</strong></h1>
+    <div class="col" id="main-body">
+
+      <div class="row" id="intro-row">
+        <div class="col" id="instructions">
+        <!-- Instructions -->
+        <h3><strong>Please answer every question before submitting the questionnaire.</strong></h3>
+        <h3>Review the User Interface (UI) of YouTube's <a href="https://www.youtube.com/feed/trending">trending</a> page (located to the right):</h3>
+        </div>
+        <div class="col" id="trending-page">
+        <!-- Image of YouTube trending page (Preview) -->
+        <a id= "trending-image" href=https://www.youtube.com/feed/trending>
+          <img src="/img/Youtube-Trending.png" alt="https://www.youtube.com/feed/trending">
+      </a>
+        </div>
+      </div>
+        <!-- Form -->
+        <form>
+            <!-- Personal Information (Text Type Question) -->
+            <div class="question" id="personal-info">
+                <div class="form-group" id="name">
+                    <p class="question">1. Full Name: </p>
+                    <input type="text" class="form-control" placeholder="Enter text here" id="inputDefault" name="fullName" required>
+                  </div>
+                </div>
+            <!-- Gender - Single Choice type question (radio button)-->
+            <fieldset class="form-group">
+                <p class="question">2. Gender: </p>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="gender" id="radio-gender-male" value="male" required>
+                    Male
+                  </label>
+                </div>
+                <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="gender" id="radio-gender-female" value="female">
+                    Female
+                  </label>
+                </div>
+                <div class="form-check disabled">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="gender" id="radio-gender-others" value="other">
+                    Others
+                  </label>
+                </div>
+              </fieldset>
+            <!-- Single Choice type question (single selection list) -->
+            <div class="form-group" id="single-select-list">
+              <p class="question">3. How often do you browse YouTube's trending page?</p>
+                <select class="form-control" id="exampleSelect1" name="browseFrequency" required>
+                  <option>1 (Not Often)</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5 (Very Often) </option>
+                </select>
+              </div>
+            <!-- Multi-Selection type question -->
+            <fieldset class="form-group" id="multi-select-question">
+              <p class="question">4. Please select ALL statement(s) that you agree with:</p>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="easy-navigation" name="checkedStatement">
+                    The trending page is easy to navigate.
+                  </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="binge-watch" name="checkedStatement">
+                      I watch multiple videos on the trending page in one sitting.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="no-issues" name="checkedStatement">
+                      I have no issues with the trending page.
+                    </label>
+                  </div>
+              </fieldset>
+            <!-- Likert Type Question -->
+            <table class="likert">
+                <thead>
+                    <tr id="likert-top">
+                        <th id="col-fix" style="text-align: left;">5. Do you agree with the following statements: </th>
+                        <th>Strongly Disagree</th>
+                        <th>Disagree</th>
+                        <th>Neither</th>
+                        <th>Agree</th>
+                        <th>Strongly Agree</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The UI does an effective job at capturing my attention.</td>
+                        <td><center><input type="radio" value="Strongly Disagree" name="capturingAttention"/></center></td>
+                        <td><center><input type="radio" value="Disagree" name="capturingAttention" required/></center></td>
+                        <td><center><input type="radio" value="Neither" name="capturingAttention"/></center></td>
+                        <td><center><input type="radio" value="Agree" name="capturingAttention"/></center></td>
+                        <td><center><input type="radio" value="Strongly Agree" name="capturingAttention"/></center></td>
+                    </tr>
+                    <tr>
+                        <td>I usually care about the content on the trending page.</td>
+                        <td><center><input type="radio" value="Strongly Disagree" name="contentImportance" required/></center></td>
+                        <td><center><input type="radio" value="Disagree" name="contentImportance"/></center></td>
+                        <td><center><input type="radio" value="Neither" name="contentImportance"/></center></td>
+                        <td><center><input type="radio" value="Agree" name="contentImportance"/></center></td>
+                        <td><center><input type="radio" value="Strongly Agree" name="contentImportance"/></center></td>
+                    </tr>
+                    <tr>
+                        <td>I am more likely to share videos that are on the trending page.</td>
+                        <td><center><input type="radio" value="Strongly Disagree" name="shareVideos" required/></center></td>
+                        <td><center><input type="radio" value="Disagree" name="shareVideos"/></center></td>
+                        <td><center><input type="radio" value="Neither" name="shareVideos"/></center></td>
+                        <td><center><input type="radio" value="Agree" name="shareVideos"/></center></td>
+                        <td><center><input type="radio" value="Strongly Agree" name="shareVideos"/></center></td>
+                    </tr>
+                    <tr>
+                        <td>I like the layout of the UI.</td>
+                        <td><center><input type="radio" value="Strongly Disagree" name="UIAppreciation" required/></center></td>
+                        <td><center><input type="radio" value="Disagree" name="UIAppreciation"/></center></td>
+                        <td><center><input type="radio" value="Neither" name="UIAppreciation"/></center></td>
+                        <td><center><input type="radio" value="Agree" name="UIAppreciation"/></center></td>
+                        <td><center><input type="radio" value="Strongly Agree" name="UIAppreciation"/></center></td>
+                    </tr>
+                </tbody>
+              </table>
+            <!-- Comments or Suggestions -->
+            <div class="form-group">
+              <p class="question">6. Additional comments and/or suggestions for improving the UI:</p>
+                <textarea class="form-control" id="exampleTextarea" rows="5" placeholder="Enter comment/suggestion here." name="commentSuggestion"></textarea>
+              </div>
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="bb">Submit Questionnaire</button>
+        </form>
+      </div>
+        <!-- Signature -->
+        <p id="signature">Questionnaire created by Kenny Nguyen</p>
+    </div>
+</body>
+</html>

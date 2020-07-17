@@ -1,0 +1,66 @@
+<html lang="en-US">
+<head>
+    <title>Survey Analysis</title>
+</head>
+
+<body>
+    <h1>Survey analysis</h1>
+    <h2>Full Name</h2>
+    <ul>
+    <% for (var i=0; i<results[0].length; i++){ %>
+        <li><%= results[0][i].fullName %> :  <%= results[0][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Gender</h2>
+    <ul>
+    <% for (var i=0; i<results[1].length; i++){ %>
+        <li><%= results[1][i].gender %> :  <%= results[1][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>How often do you browse YouTube's trending page?</h2>
+    <ul>
+    <% for (var i=0; i<results[2].length; i++){ %>
+        <li><%= results[2][i].browseFrequency %> :  <%= results[2][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Checked Statements</h2>
+    <ul>
+    <% for (var i=0; i<results[3].length; i++){ %>
+        <li><%= results[3][i].checkedStatement %> :  <%= results[3][i].count %></li>
+    <% } %>    
+    </ul>
+
+    <!-- Liker Questions -->
+    <h2>The UI does an effective job at capturing my attention: </h2>
+    <ul>
+    <% for (var i=0; i<results[4].length; i++){ %>
+        <li><%= results[4][i].capturingAttention %> :  <%= results[4][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>I usually care about the content on the trending page: </h2>
+    <ul>
+    <% for (var i=0; i<results[5].length; i++){ %>
+        <li><%= results[5][i].contentImportance %> :  <%= results[5][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>I am more likely to share videos that are on the trending page: </h2>
+    <ul>
+    <% for (var i=0; i<results[6].length; i++){ %>
+        <li><%= results[6][i].shareVideos %> :  <%= results[6][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>I like the layout of the UI: </h2>
+    <ul>
+    <% for (var i=0; i<results[7].length; i++){ %>
+        <li><%= results[7][i].UIAppreciation %> :  <%= results[7][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Comments and Suggestions </h2>
+    <ul>
+    <% for (var i=0; i<results[8].length; i++){ %>
+        <li><%= results[8][i].commentSuggestion %></li><br>
+    <% } %>    
+    </ul>
+    
+</body>
+</html>

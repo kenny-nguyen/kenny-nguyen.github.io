@@ -1,0 +1,88 @@
+*{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+#main-body{
+  padding: 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+h1{
+  color: white !important;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: rgb(120, 194, 173);
+  width: 100%;
+  padding: 30px;
+  font-weight: 1000;
+}
+
+h3{
+  margin-top: 15px !important;
+  padding: 20px;
+  text-align: left;
+}
+
+#signature{
+  color: red;
+  text-align: right;
+  font-style: italic;
+  font-size: 12px;
+  padding-right: 20px;
+}
+
+#intro-row{
+  display: flex;
+  width: 1080px;
+}
+
+#trending-image img{
+  width: 540px;
+  height: 360px;
+  border: 2px solid black;
+  margin: 20px 30px 0px 0px;
+}
+
+tr{
+  text-align: center;
+}
+
+th{
+  width: 12%;
+}
+
+td{
+  text-align: left;
+}
+
+#col-fix{
+  width: 40%;
+}
+
+.question{
+  margin-top: 20px;
+  padding: 2px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+form::before{
+  display: inline-block;
+    content: "";
+    border-top: .1rem solid black;
+    width: 100%;
+    margin: 50px 0px 0px 1rem;
+    transform: translateY(-1rem);
+}
+
+.likert{
+  margin: 40px 0px;
+}
+
+tr{
+  margin-bottom: 3px;
+  border-bottom: 1px dashed rgba(0,0,0, 0.50);
+}

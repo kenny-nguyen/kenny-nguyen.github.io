@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+}
+
+.topnav-li{
+    display: inline-block;
+    margin: 5px;
+    float: left;
+}
+
+#top-navbar{
+    display: inline-block;
+    position: relative;
+}
+
+#company-name{
+    font-size: 40px;
+}
+
+.right-float{
+    float: right;
+}
+
+.post-content{
+    display: flex;
+}
+
+.tutorial-video{
+    width: 100% !important;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.dot{
+    list-style-type: disc !important;
+}
+
+.inline-display{
+    display: inline-block;
+    width: 33.33%;
+    text-align: center;
+    border: 1px solid grey;
+    list-style-type: decimal;
+}
+
+
+.signup-form{
+    border: 5px solid rgb(236, 240, 241);
+    width: 70%;
+    padding: 10px 30px 10px 30px;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+
+label{
+    color: black;
+}
+
+ol{
+    width: 100%;
+    padding: 0;
+}
+
+.centered{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.fa-circle-o{
+    float: right;
+    padding: 5px;
+}
+
+.fa-check-circle-o{
+    float: right;
+    padding: 5px;
+}
+
+.text-success{
+    font-size: 30px;
+}
+
+.signup-btn{
+    float: right;
+    padding: 5px 15px;
+    margin: 3px;
+}
+
+.previous-btn{
+    padding: 5px 15px;
+    margin: 3px;
+}
+
+.footer{
+    height: 10vh;
+    font-style: italic;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.center-vert{
+    margin-top: 10px;
+}
+
+#profile{
+    max-width: 200px;
+}
+
+.personalize-form{
+    margin: 5vh 0 10vh;
+}
+
+.page-container{
+    position: relative;
+    min-height: 100vh;
+}
+
+.content-wrapper{
+    padding-bottom: 10vh;
+}
+
+.breadcrumb{
+    background-color: white;
+    margin:0;
+}
+
+.jumbotron{
+    margin-top: 5vh;
+    padding: 30px 50px;
+}
+
+.green-text{
+    color: rgb(24, 188, 156);
+}
+
+.home-page-main-body{
+    margin: 15px 15px 0px 15px;
+}
+
+#home-welcome{
+    margin-bottom: 3vh;
+}
+
+.btn-primary{
+    margin: 5px 10px 5px 0px;
+}
+
+.nav-link{
+    margin: 2px 0px 0px;
+    padding: 8px 20px 0px;
+}
+
+#myTabContent{
+    padding: 20px 16px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 1px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0,0,0,0.125);
+    border-top: none;
+}
+
+.dot{
+    margin-left: 16px;
+}
+
+.dec{
+    margin-left: 16px;
+}
+
+.collection-item{
+    padding: 15px;
+}
+
+.lm-fix{
+    margin-left: 15px !important;
+}
+
+.dropdown-item:hover{
+    color: #fff !important;
+}
+
+.dropdown-menu{
+    width: inherit;
+}
+
+.nav-tabs{
+    border: 1px solid #ecf0f1;
+}
