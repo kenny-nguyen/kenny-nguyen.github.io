@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Gantt Chart</title>
+  <link href="https://playground.anychart.com/1wJDc6IJ/iframe" rel="canonical">
+  <meta content="Gantt Chart,Gantt Project Chart,Project Management" name="keywords">
+  <meta content="AnyChart - JavaScript Charts designed to be embedded and integrated" name="description">
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+  <link href="css/anychart-ui.min.css" rel="stylesheet" type="text/css">
+  <link href="css/anychart-font.min.css" rel="stylesheet" type="text/css">
+  <style>html, body, #container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}</style>
+ </head>
+ <body>
+  <div id="container"></div>
+  <script src="js/anychart-base.min.js"></script>
+  <script src="js/anychart-gantt.min.js"></script>
+  <script src="js/anychart-exports.min.js"></script>
+  <script src="js/anychart-ui.min.js"></script>
+  <script type="text/javascript">anychart.onDocumentReady(function () {
+    // create data tree on our data
+    var treeData = anychart.data.tree(getData(), "as-table");
+
+    // create project gantt chart
+    var chart = anychart.ganttProject();
+
+    // set container id for the chart
+    chart.container('container');
+
+    // set data for the chart
+    chart.data(treeData);
+
+    chart.zoomTo(951350400000, 954201600000);
+    // initiate chart drawing
+    chart.draw();
+});
+
+function getData() {
+    return [
+        {"id": "1", "name": "Phase 1 - Strategic Plan", "progressValue": "14%", "actualStart": 951350400000, "actualEnd": 954201600000},
+        {"id": "2", "name": "Self-Assessment", parent: "1", "progressValue": "25%", "actualStart": 951350400000, "actualEnd": 951955200000},
+        {"id": "3", "name": "Define business vision", parent: "2", "progressValue": "0%", "actualStart": 951408000000, "actualEnd": 951440400000, "connectTo": "4", "connectorType": "finish-start"},
+        {"id": "4", "name": "Identify available skills, information and support", parent: "2", "progressValue": "0%", "actualStart": 951494400000, "actualEnd": 951526800000, "connectTo": "5", "connectorType": "finish-start"},
+        {"id": "5", "name": "Decide whether to proceed", parent: "2", "progressValue": "0%", "actualStart": 951753600000, "actualEnd": 951786000000, "connectTo": "7", "connectorType": "finish-start"},
+        {"id": "6", "name": "Define the Opportunity", parent: "1", "progressValue": "27%", "actualStart": 951782400000, "actualEnd": 952992000000},
+        {"id": "7", "name": "Research the market and competition", parent: "6", "progressValue": "0%", "actualStart": 951840000000, "actualEnd": 951872400000, "connectTo": "8", "connectorType": "finish-start"},
+        {"id": "8", "name": "Interview owners of similar businesses", parent: "6", "progressValue": "60%", "actualStart": 951868800000, "actualEnd": 952473600000, "connectTo": "9", "connectorType": "finish-start"},
+        {"id": "9", "name": "Identify needed resources", parent: "6", "progressValue": "0%", "actualStart": 952531200000, "actualEnd": 952650000000, "connectTo": "10", "connectorType": "finish-start"},
+        {"id": "10", "name": "Identify operating cost elements", parent: "6", "progressValue": "0%", "actualStart": 952704000000, "actualEnd": 952995600000, "connectTo": "12", "connectorType": "finish-start"},
+        {"id": "11", "name": "Evaluate Business Approach", parent: "1", "progressValue": "0%", "actualStart": 953049600000, "actualEnd": 953341200000},
+        {"id": "12", "name": "Define new entity requirements", parent: "11", "progressValue": "0%", "actualStart": 953049600000, "actualEnd": 953082000000, "connectTo": "17", "connectorType": "finish-start"},
+        {"id": "13", "name": "Identify on-going business purchase opportunities", parent: "11", "progressValue": "0%", "actualStart": 953136000000, "actualEnd": 953168400000, "connectTo": "14", "connectorType": "finish-start"},
+        {"id": "14", "name": "Research franchise possibilities", parent: "11", "progressValue": "0%", "actualStart": 953222400000, "actualEnd": 953254800000, "connectTo": "15", "connectorType": "finish-start"},
+        {"id": "15", "name": "Summarize business approach", parent: "11", "progressValue": "0%", "actualStart": 953308800000, "actualEnd": 953341200000, "connectTo": "21", "connectorType": "finish-start"},
+        {"id": "16", "name": "Evaluate Potential Risks and Rewards", parent: "1", "progressValue": "0%", "actualStart": 953136000000, "actualEnd": 953946000000},
+        {"id": "17", "name": "Assess market size and stability", parent: "16", "progressValue": "0%", "actualStart": 953136000000, "actualEnd": 953254800000, "connectTo": "18", "connectorType": "finish-start"},
+        {"id": "18", "name": "Estimate the competition", parent: "16", "progressValue": "0%", "actualStart": 953308800000, "actualEnd": 953341200000, "connectTo": "19", "connectorType": "finish-start"},
+        {"id": "19", "name": "Assess needed resource availability", parent: "16", "progressValue": "0%", "actualStart": 953740800000, "actualEnd": 953859600000, "connectTo": "20", "connectorType": "finish-start"},
+        {"id": "20", "name": "Evaluate realistic initial market share", parent: "16", "progressValue": "0%", "actualStart": 953913600000, "actualEnd": 953946000000},
+        {"id": "21", "name": "Determine financial requirements", parent: "16", "progressValue": "0%", "actualStart": 953568000000, "actualEnd": 953686800000, "connectTo": "22", "connectorType": "finish-start"},
+        {"id": "22", "name": "Review personal suitability", parent: "16", "progressValue": "0%", "actualStart": 953740800000, "actualEnd": 953773200000, "connectTo": "23", "connectorType": "finish-start"},
+        {"id": "23", "name": "Evaluate initial profitability", parent: "16", "progressValue": "0%", "actualStart": 953827200000, "actualEnd": 953859600000, "connectTo": "24", "connectorType": "finish-start"},
+        {"id": "24", "name": "Review and modify the strategic plan", parent: "1", "progressValue": "0%", "actualStart": 953913600000, "actualEnd": 954208800000, "connectTo": "25", "connectorType": "finish-start"},
+        {"id": "25", "name": "Confirm decision to proceed", parent: "1", "progressValue": "0%", "actualStart": 954208800000, "actualEnd": 954208800000, "connectTo": "28", "connectorType": "finish-start"},
+        {"id": "26", "name": "Phase 2 - Define the Business Opportunity", "progressValue": "19%", "actualStart": 954201600000, "actualEnd": 957312000000},
+        {"id": "27", "name": "Define the Market", parent: "26", "progressValue": "28%", "actualStart": 954201600000, "actualEnd": 955670400000},
+        {"id": "28", "name": "Access available information", parent: "27", "progressValue": "0%", "actualStart": 954262800000, "actualEnd": 954295200000, "connectTo": "35", "connectorType": "start-start"},
+        {"id": "29", "name": "Create market analysis plan", parent: "27", "progressValue": "0%", "actualStart": 954349200000, "actualEnd": 954468000000},
+        {"id": "30", "name": "Implement market analysis plan", parent: "27", "progressValue": "40%", "actualStart": 954460800000, "actualEnd": 955065600000, "connectTo": "31", "connectorType": "finish-start"},
+        {"id": "31", "name": "Identify competition", parent: "27", "progressValue": "60%", "actualStart": 955065600000, "actualEnd": 955411200000, "connectTo": "32", "connectorType": "finish-start"},
+        {"id": "32", "name": "Summarize the market", parent: "27", "progressValue": "0%", "actualStart": 955472400000, "actualEnd": 955591200000, "connectTo": "33", "connectorType": "finish-start"},
+        {"id": "33", "name": "Identify target market niche", parent: "27", "progressValue": "0%", "actualStart": 955645200000, "actualEnd": 955677600000, "connectTo": "35", "connectorType": "start-start"},
+        {"id": "34", "name": "Identify Needed Materials and Supplies", parent: "26", "progressValue": "0%", "actualStart": 955645200000, "actualEnd": 956368800000},
+        {"id": "35", "name": "Select a business approach (from 'Evaluate Business Approach' above)", parent: "34", "progressValue": "0%", "actualStart": 955645200000, "actualEnd": 955764000000, "connectTo": "36", "connectorType": "finish-start"},
+        {"id": "36", "name": "Identify management staff resources", parent: "34", "progressValue": "0%", "actualStart": 955990800000, "actualEnd": 956023200000, "connectTo": "37", "connectorType": "finish-start"},
+        {"id": "37", "name": "Identify staffing requirements", parent: "34", "progressValue": "0%", "actualStart": 956077200000, "actualEnd": 956109600000, "connectTo": "38", "connectorType": "finish-start"},
+        {"id": "38", "name": "Identify needed raw materials", parent: "34", "progressValue": "0%", "actualStart": 956163600000, "actualEnd": 956196000000, "connectTo": "39", "connectorType": "finish-start"},
+        {"id": "39", "name": "Identify needed utilities", parent: "34", "progressValue": "0%", "actualStart": 956250000000, "actualEnd": 956282400000, "connectTo": "40", "connectorType": "finish-start"},
+        {"id": "40", "name": "Summarize operating expenses and financial projections", parent: "34", "progressValue": "0%", "actualStart": 956336400000, "actualEnd": 956368800000, "connectTo": "42", "connectorType": "finish-start"},
+        {"id": "41", "name": "Evaluate Potential Risks and Rewards", parent: "26", "progressValue": "17%", "actualStart": 956534400000, "actualEnd": 957225600000},
+        {"id": "42", "name": "Assess market size and stability", parent: "41", "progressValue": "50%", "actualStart": 956534400000, "actualEnd": 956707200000, "connectTo": "43", "connectorType": "finish-start"},
+
+    ];
+}</script>
+ </body>
+</html>
