@@ -56,7 +56,7 @@
         // set data for the chart
         chart.data(treeData);
 
-        chart.zoomTo(Date.UTC(2020, 8, 1), Date.UTC(2020, 11, 15));
+        chart.zoomTo(Date.UTC(2020, 8, 1), Date.UTC(2020, 9, 15));
         // initiate chart drawing
         chart.draw();
 
@@ -71,6 +71,12 @@
         column_2.title().fontColor("#1A76D2");
         column_2.title().fontWeight(600);
       });
+
+      // Connector With example below:
+      // "start-start"	The predecessor must start before the successor can start.
+      // "start-finish"	The predecessor must start before the successor can finish.
+      // "finish-start"	The predecessor must finish before the successor can start.
+      // "finish-finish"	The predecessor must finish before the successor can finish.
 
       function getData() {
         return [
@@ -89,8 +95,6 @@
             //progressValue: "100%",
             actualStart: Date.UTC(2020, 8, 8),
             actualEnd: Date.UTC(2020, 11, 15),
-            connectTo: "4",
-            connectorType: "start-start",
           },
           {
             id: "3",
@@ -105,18 +109,18 @@
             name: "UI/UX Design",
             parent: "2",
             progressValue: "100%",
-            actualStart: Date.UTC(2020, 8, 15),
+            actualStart: Date.UTC(2020, 8, 8),
             actualEnd: Date.UTC(2020, 9, 1),
-            connectTo: "7",
-            connectorType: "start-start",
+            connectTo: "5",
+            connectorType: "finish-start",
           },
           {
             id: "5",
             name: "Front End Development",
             parent: "2",
             progressValue: "0%",
-            actualStart: 951753600000,
-            actualEnd: 951786000000,
+            actualStart: Date.UTC(2020, 9, 3),
+            actualEnd: Date.UTC(2020, 10, 15),
             //connectTo: "7",
             connectorType: "start-start",
           },
@@ -135,6 +139,8 @@
             progressValue: "100%",
             actualStart: Date.UTC(2020, 8, 15),
             actualEnd: Date.UTC(2020, 8, 19),
+            connectTo: "8",
+            connectorType: "finish-start",
           },
           {
             id: "8",
@@ -144,17 +150,17 @@
             actualStart: Date.UTC(2020, 8, 19),
             actualEnd: Date.UTC(2020, 8, 21),
             connectTo: "9",
-            connectorType: "start-start",
+            connectorType: "finish-start",
           },
           {
             id: "9",
             name: "Figma Wireframe Prototyping",
             parent: "4",
             progressValue: "100%",
-            actualStart: Date.UTC(2020, 8, 19),
-            actualEnd: Date.UTC(2020, 8, 21),
-            connectTo: "10",
-            connectorType: "start-start",
+            actualStart: Date.UTC(2020, 8, 21),
+            actualEnd: Date.UTC(2020, 9, 1),
+            connectTo: "5",
+            connectorType: "finish-start",
           },
           {
             id: "10",
