@@ -70,7 +70,8 @@
         column_2.title().text("CEG4912 Diet Tracker (Group 12)");
         column_2.title().fontColor("#1A76D2");
         column_2.title().fontWeight(600);
-
+        // collapse all tasks
+        chart.collapseAll();
         // configure the visual settings of the data grid
         var dataGrid = chart.dataGrid();
         // dataGrid.rowEvenFill("gray 0.3");
@@ -520,7 +521,7 @@
           {
             id: "44",
             name: "Revised Project Proposal",
-            parent: "43",
+            parent: "42",
             progressValue: "100%",
             actualStart: Date.UTC(2020, 8, 13),
             actualEnd: Date.UTC(2020, 8, 20),
@@ -636,9 +637,6 @@
             actualEnd: Date.UTC(2020, 11, 15),
             // connectTo: "45",
             // connectorType: "finish-finish",
-          },
-          {
-            id: "100",
           },
         ];
       }
