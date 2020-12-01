@@ -70,6 +70,8 @@
         column_2.title().text("CEG4912 Diet Tracker (Group 12)");
         column_2.title().fontColor("#1A76D2");
         column_2.title().fontWeight(600);
+        // set the position of the splitter
+        chart.splitterPosition("30%");
         // collapse all tasks
         chart.collapseAll();
         // configure the visual settings of the data grid
@@ -327,8 +329,8 @@
             progressValue: "100%",
             actualStart: Date.UTC(2020, 8, 25),
             actualEnd: Date.UTC(2020, 10, 25),
-            // connectTo: "22",
-            // connectorType: "start-start",
+            connectTo: "56",
+            connectorType: "finish-start",
           },
           {
             id: "25",
@@ -635,6 +637,16 @@
             progressValue: "100%",
             actualStart: Date.UTC(2020, 10, 29),
             actualEnd: Date.UTC(2020, 11, 15),
+            // connectTo: "45",
+            // connectorType: "finish-finish",
+          },
+          {
+            id: "56",
+            name: "Ripeness Prediction",
+            parent: "3",
+            progressValue: "100%",
+            actualStart: Date.UTC(2020, 10, 25),
+            actualEnd: Date.UTC(2020, 11, 2),
             // connectTo: "45",
             // connectorType: "finish-finish",
           },
